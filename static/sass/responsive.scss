@@ -1,0 +1,33 @@
+@media screen and (max-width: 768px) {
+  body {
+    align-items: center;
+    justify-content: center;
+    color: var(--blue);
+    font-size: 1em;
+    height: 100vh;
+
+    .container {
+      padding-top: 3rem;
+      display: grid;
+      position: relative;
+
+      .svg-container {
+        margin-left: 0;
+        margin-bottom: -5rem;
+        position: absolute;
+      }
+
+      .text-container {
+        padding: 0.8rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  body {
+    .container {
+      padding-top: 0rem;
+    }
+  }
+}

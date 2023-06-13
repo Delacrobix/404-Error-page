@@ -1,0 +1,85 @@
+html,
+body {
+  font-family: 'Nunito Sans';
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  padding-top: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+  font-size: 1em;
+
+  .svg-container {
+    margin-left: 30rem;
+    margin-bottom: -15rem;
+
+    svg {
+      visibility: hidden;
+      width: 100%;
+    }
+  }
+
+  .text-container {
+    h1 {
+      font-size: 7.5em;
+      margin: 15px 0px;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-weight: bold;
+    }
+  }
+}
+
+.btn {
+  z-index: 1;
+  overflow: hidden;
+  background: transparent;
+  position: relative;
+  padding: 8px 50px;
+  cursor: pointer;
+  font-size: 1em;
+  letter-spacing: 2px;
+  transition: 0.2s ease;
+  font-weight: bold;
+  margin: 5px 0px;
+  border-radius: 30px;
+
+  &.green {
+    border-radius: 30px;
+    border: 4px solid var(--green);
+    color: var(--blue);
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0%;
+      height: 100%;
+      background: var(--green);
+      z-index: -1;
+      border-radius: 30px;
+      transition: 0.2s ease;
+    }
+
+    &:hover {
+      border-radius: 30px;
+      color: var(--white);
+      background: var(--green);
+      transition: 0.2s ease;
+
+      &:before {
+        width: 100%;
+        border-radius: 30px;
+      }
+    }
+  }
+}
